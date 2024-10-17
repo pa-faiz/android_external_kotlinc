@@ -88,6 +88,18 @@ java_import {
     exclude_dirs: ["META-INF/versions"],
 }
 
+java_import_host {
+    name: "kotlin-serialize-compiler-plugin-lib",
+    jars: ["lib/kotlin-serialization-compiler-plugin.jar"],
+    sdk_version: "core_current",
+    exclude_dirs: ["META-INF/versions"],
+}
+
+kotlin_plugin {
+    name: "kotlin-serialize-compiler-plugin",
+    static_libs: ["kotlin-serialize-compiler-plugin-lib"],
+}
+
 // See: http://go/android-license-faq
 license {
     name: "external_kotlinc_license",
