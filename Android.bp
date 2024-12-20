@@ -100,6 +100,18 @@ kotlin_plugin {
     static_libs: ["kotlin-serialize-compiler-plugin-lib"],
 }
 
+java_import_host {
+    name: "kotlin-parcelize-compiler-plugin-lib",
+    jars: ["lib/parcelize-compiler.jar"],
+    sdk_version: "core_current",
+    exclude_dirs: ["META-INF/versions"],
+}
+
+kotlin_plugin {
+    name: "kotlin-parcelize-compiler-plugin",
+    static_libs: ["kotlin-parcelize-compiler-plugin-lib"],
+}
+
 // See: http://go/android-license-faq
 license {
     name: "external_kotlinc_license",
